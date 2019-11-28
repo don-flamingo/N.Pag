@@ -1,6 +1,6 @@
-using NPag.Settings;
+using N.Pag.Settings;
 
-namespace NPag.Queries
+namespace N.Pag.Queries
 {
     public abstract class PaginationQueryBase : IPaginationQuery
     {

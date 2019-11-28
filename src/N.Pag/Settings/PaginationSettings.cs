@@ -1,4 +1,4 @@
-namespace NPag.Settings
+namespace N.Pag.Settings
 {
     internal static class PaginationSettings
     {

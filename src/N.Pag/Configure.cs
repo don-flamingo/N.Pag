@@ -1,6 +1,6 @@
-using NPag.Settings;
+using N.Pag.Settings;
 
-namespace NPag
+namespace N.Pag
 {
     public class NPagConfiguration
     {

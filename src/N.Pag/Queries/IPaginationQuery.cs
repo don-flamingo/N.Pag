@@ -1,4 +1,4 @@
-namespace NPag.Queries
+namespace N.Pag.Queries
 {
     public interface IPaginationQuery
     {

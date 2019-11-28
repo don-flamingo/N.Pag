@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
-using NPag.Exceptions;
+using N.Pag.Exceptions;
 
-namespace NPag.Expressions
+namespace N.Pag.Expressions
 {
     public static class SortExpressionFactory
     {

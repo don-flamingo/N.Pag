@@ -2,9 +2,9 @@ using System;
 using System.Linq;
 using System.Linq.Dynamic.Core;
 using System.Linq.Expressions;
-using NPag.Exceptions;
+using N.Pag.Exceptions;
 
-namespace NPag.Expressions
+namespace N.Pag.Expressions
 {
     public static class WhereExpressionFactory
     {

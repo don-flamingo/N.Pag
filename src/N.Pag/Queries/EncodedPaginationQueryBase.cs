@@ -1,8 +1,8 @@
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
-using NPag.Settings;
+using N.Pag.Settings;
 
-namespace NPag.Queries
+namespace N.Pag.Queries
 {
     public abstract class EncodedPaginationQueryBase : IPaginationQuery
     {
@@ -28,7 +28,7 @@ namespace NPag.Queries
         {
         }
         
-        private EncodedPaginationQueryBase(
+        public EncodedPaginationQueryBase(
             string where = null, 
             string orderBy = null, 
             int page = default,
@@ -41,7 +41,7 @@ namespace NPag.Queries
             PageSize = pageSize;
         }
 
-        public string ToUri()
+        public virtual string ToUri()
         {
             var sb = new StringBuilder("?");
 
@@ -49,7 +49,7 @@ namespace NPag.Queries
                 sb.Append($"{nameof(Where)}={Base64UrlEncoder.Encode(_where)}&");
             
             if (!string.IsNullOrEmpty(_orderBy))
-                sb.Append($"{nameof(OrderBy)}={Base64UrlEncoder.Encode(_where)}&");
+                sb.Append($"{nameof(OrderBy)}={Base64UrlEncoder.Encode(_orderBy)}&");
             
             if (Page != default(int))
                 sb.Append($"{nameof(Page)}={Page}&");
@@ -60,6 +60,18 @@ namespace NPag.Queries
             sb.Remove(sb.Length - 1, 1);
 
             return sb.ToString();
+        }
+
+        public virtual EncodedPaginationQueryBase SetNormalOrderBy(string value)
+        {
+            this._orderBy = value;
+            return this;
+        }
+        
+        public virtual EncodedPaginationQueryBase SetNormalWhere(string value)
+        {
+            this._where = value;
+            return this;
         }
     }
 }

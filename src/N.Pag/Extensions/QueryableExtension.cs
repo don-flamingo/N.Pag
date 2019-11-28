@@ -1,9 +1,9 @@
 using System.Linq;
-using NPag.Expressions;
-using NPag.Queries;
-using NPag.Settings;
+using N.Pag.Expressions;
+using N.Pag.Queries;
+using N.Pag.Settings;
 
-namespace NPag.Extensions
+namespace N.Pag.Extensions
 {
     public static class QueryableExtension
     {
