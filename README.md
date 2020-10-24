@@ -22,7 +22,7 @@ N.Pag enables easy pagination mechanism by evaulate LINQ string to IQueryable in
 ```users?pageSize=20&page=2&where=c3RhdHVzID09ICJOIg==``` <=> where ```status == "N"``` 
 
 
-```pageSize=20&where=c3RhdHVzID09ICJOIg==&orderBy=bmFtZS1kZXNj``` <=> order by ```name-desc``` 
+```users?pageSize=20&where=c3RhdHVzID09ICJOIg==&orderBy=bmFtZS1kZXNj``` <=> order by ```name-desc``` 
 
 ##### Queries 
 
