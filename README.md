@@ -42,12 +42,12 @@ public class GetUsersQuery : EncodedPaginationQueryBase
 public async Task<IActionResult> Get(GetUsersQuery query)
 {
     var count = await _context.Users.Where(paginationQuery).CountAsync();
-    var listed = await _context.Users.FilterBy(paginationQuery).ToListAsync();
+    var filtered = await _context.Users.FilterBy(paginationQuery).ToListAsync();
     
     // pagination wrapper
     var result = new PaginationResult<User>
     {
-        List = itemsDto,
+        List = filtered,
         TotalCount = count
     };
     
