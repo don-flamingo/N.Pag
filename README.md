@@ -13,7 +13,7 @@ N.Pag enables easy pagination mechanism by evaulate LINQ string to IQueryable in
     1. ```EncodedPaginationQueryBase``` - parameters Where & OrderBy _must be_ encoded by base64,
     2. ```PaginationQueryBase``` - parameters are normal.
 3. Create controler method with argument of Your query.
-4. Invoke method ```FilterBy<TModel>(myAwesomeQuery)``` on you IQuerable (DbContext or other collection).
+4. Invoke method ```FilterBy<TModel>(myAwesomeQuery)``` on the IQuerable (DbContext or other collection).
 5. Return Your awsome filtered data 🤣!
 
 #### Example
