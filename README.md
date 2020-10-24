@@ -26,7 +26,7 @@ N.Pag enables easy pagination mechanism by evaulate LINQ string to IQueryable in
 
 ##### Queries 
 
-```
+```csharp
 public class GetUsersQuery : EncodedPaginationQueryBase
 {
   // Some additional fields
@@ -36,7 +36,7 @@ public class GetUsersQuery : EncodedPaginationQueryBase
 
 ##### Api Methods
 
-```
+```csharp
 [HttpGet]
 [ProducesResponseType(typeof(PaginationResult<User>), StatusCodes.Status200OK)]
 public async Task<IActionResult> Get(GetUsersQuery query)
