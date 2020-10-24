@@ -55,8 +55,5 @@ public async Task<IActionResult> Get(GetUsersQuery query)
 }
 ```
 
-
-Get it by nuget: 
-
-
+#### Nuget 
 https://www.nuget.org/packages/N.Pag/
